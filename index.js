@@ -33,3 +33,17 @@ var countSheep = function(num){
 //explain it 
 
 console.log(countSheep(3))
+
+/*Introduction
+The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
+
+Task
+Given a year, return the century it is in.*/
+
+function century(year){
+return Math.ceil(year/100)
+}
+let century2 = (year) => Math.ceil(year/100)
+//explicacion aca lo que hice fue dividir los anos entre los siglos que un siglo es 100, y eso lo aplique a un math ceil para que me de el entero
+console.log(century2(2022))
+
