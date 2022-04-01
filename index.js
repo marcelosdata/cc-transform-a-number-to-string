@@ -83,3 +83,25 @@ function repeatStr(times,str) {
 
 console.log(repeatStr(4,'hola'))
 
+/*
+It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+*/
+
+let removeFirstLast = (str) => {
+  let sujeto = str.split('')
+  sujeto.pop()
+  sujeto.shift()
+  sujeto = sujeto.join('')
+  return sujeto
+}
+  //you got this
+
+console.log(removeFirstLast('malopo'))
+
+//now make it using slice
+
+let removeFandL = (str) => str.slice(1,-1)
+
+console.log(removeFandL('parcelo'))
+
+//string.slice(start, end)
