@@ -105,3 +105,43 @@ let removeFandL = (str) => str.slice(1,-1)
 console.log(removeFandL('parcelo'))
 
 //string.slice(start, end)
+
+/*
+Description:
+Complete the solution so that it reverses all of the words within the string passed in.
+
+Example:
+
+"The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
+*/
+
+function reverseWords(str){
+  
+  return str.split(' ').reverse().join(' ')
+  //return str; // reverse those words
+  }
+console.log(reverseWords('hola, caballero de la noche'))
+
+/*
+Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+The output should be two capital letters with a dot separating them.
+
+It should look like this:
+
+Sam Harris => S.H
+
+patrick feeney => P.F
+*/
+
+function abbrevName(name,last){
+return name.charAt(0) + '.' + last.charAt(0)
+}
+console.log(abbrevName('Marcelo','Salazar'))
+//another way
+let initialsConverter = (name,last) => {
+  let convert = name.split('')[0].toUpperCase() + '.' + last.split('')[0].toUpperCase()
+  return convert
+}
+
+console.log(initialsConverter('marcelo','salazar'))
