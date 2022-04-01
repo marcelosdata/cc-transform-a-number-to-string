@@ -145,3 +145,35 @@ let initialsConverter = (name,last) => {
 }
 
 console.log(initialsConverter('marcelo','salazar'))
+ /*
+You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+#Examples:
+
+Kata.getMiddle("test") should return "es"
+
+Kata.getMiddle("testing") should return "t"
+
+Kata.getMiddle("middle") should return "dd"
+
+Kata.getMiddle("A") should return "A"
+*/
+
+function getMiddle(str) {
+  let middle = Math.floor(str.length / 2)
+  
+  return str.length % 2 === 0 ? 
+  str.slice(middle - 1 ,middle + 1) :       
+  str.slice(middle, middle + 1)
+  console.log(middle)
+}
+
+console.log(getMiddle('marceloS'))
+
+let middle = Math.floor('marceloS'.length / 2)
+console.log('marcelo'.slice(3,5))
+
+/* explicacion : primero obtengo el valor de enmedio del string usando el tamano del string con length dividido 2, esto lo rendondeo hacia abajo con Math floor; luego hago una comprobacion con un ternario, si el valor es par o impar, de esto dependera cuantos caracteres tomar, en este caso marcelos tiene 8 caracteres , las de enmedio serian ce. Para eso compruebo que sea par y le aplico el metodo splice al string indicandole que el rango a tomar sera de la mitad restale uno y de la mitad sumale uno, seran los caracteres 3 (4-1) y 5(4+1);
+en caso de que sea impar entonces solo sera del caracter medio hasta una posicion mas (si fuera pedro entonces del 3 al 4) para tomar solo el 3 que es la d*/
+
+console.log(getMiddle('pedro'))
