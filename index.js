@@ -47,3 +47,39 @@ let century2 = (year) => Math.ceil(year/100)
 //explicacion aca lo que hice fue dividir los anos entre los siglos que un siglo es 100, y eso lo aplique a un math ceil para que me de el entero
 console.log(century2(2022))
 
+///
+/*
+Given an array of integers your solution should find the smallest integer.
+
+For example:
+
+Given [34, 15, 88, 2] your solution will return 2
+Given [34, -345, -1, 100] your solution will return -345
+You can assume, for the purpose of this kata, that the supplied array will not be empty.*/
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+   let small = Math.min(...args)   
+    return small
+  }
+}
+//explain it and try to use it
+
+
+/* 
+Write a function called repeatStr which repeats the given string string exactly n times.
+
+repeatStr(6, "I") // "IIIIII"
+repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+*/
+
+function repeatStr(times,str) {
+   let repeated = '' 
+  for(let i = 0; i<times;i++){
+    repeated += str 
+   }
+  return repeated
+}
+
+console.log(repeatStr(4,'hola'))
+
