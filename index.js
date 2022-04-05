@@ -176,4 +176,75 @@ console.log('marcelo'.slice(3,5))
 /* explicacion : primero obtengo el valor de enmedio del string usando el tamano del string con length dividido 2, esto lo rendondeo hacia abajo con Math floor; luego hago una comprobacion con un ternario, si el valor es par o impar, de esto dependera cuantos caracteres tomar, en este caso marcelos tiene 8 caracteres , las de enmedio serian ce. Para eso compruebo que sea par y le aplico el metodo splice al string indicandole que el rango a tomar sera de la mitad restale uno y de la mitad sumale uno, seran los caracteres 3 (4-1) y 5(4+1);
 en caso de que sea impar entonces solo sera del caracter medio hasta una posicion mas (si fuera pedro entonces del 3 al 4) para tomar solo el 3 que es la d*/
 
-console.log(getMiddle('pedro'))
+console.log(getMiddle('pedros'))
+
+/*
+Given an array of integers.
+
+Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+
+If the input is an empty array or is null, return an empty array.
+Example
+For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].*/
+
+arrTest = [1, 2, ,3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
+
+let sumNegContPos = (input) => {
+  return (input === null || input < 0) ? [] : 
+    [ input.filter(e => e > 0).length ,
+      input.filter(e => e < 0).reduce((acc,c) => acc+c,0) ]
+}
+
+console.log(sumNegContPos(arrTest))
+
+console.log(arrTest.filter(e=> e>0).reduce((acc,c)=> acc+c,0))
+
+/*
+Can you find the needle in the haystack?
+
+Write a function findNeedle() that takes an array full of junk but containing one "needle" / After your function finds the needle it should return a message (as a string) that says:
+"found the needle at position " plus the index it found the needle, so:
+findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])
+should return "found the needle at position 5" (in COBOL "found the needle at position 6")*/
+
+let needle = ['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']
+
+let findNeedle = (arr) => {
+  let position = arr.map(e=>e).indexOf('needle')
+  return `found the needle at position ${position}`
+}
+
+console.log(findNeedle(needle))
+
+/*Convert number to reversed array of digits
+Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+Example:
+348597 => [7,9,5,8,4,3]
+0 => [0]*/
+
+function giveMeArray(str){
+  let sol = transformToNumber(str).split('').reverse()
+  return sol.map(e=> Number(e))
+}
+
+let transform = (str) => {
+  let sol = transformToNumber(str).split('').reverse()
+  return sol.map(e=> Number(e))
+}
+
+console.log(transform(5344))
+
+
+//git commit --amend --date '2022-04-03' "Add attempt 4-03 coding challenge"
+
+let digitize = (n) => {
+  let sol = n.toString().split('').reverse()
+  return sol.map(e=> Number(e))
+}
+
+console.log(digitize(4432))
+
+function digitize2(n) {
+  return String(n).split('').map(Number).reverse()
+}
