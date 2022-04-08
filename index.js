@@ -268,4 +268,11 @@ let stringy = (size) => {
 }
 
 console.log(stringy('size'))
-  
+
+//Simple, remove the spaces from the string, then return the resultant string.
+
+function noSpace(x){
+  return x.replace(/\s+/g,'')}
+
+let noSpace2 = (x) => x.split(' ').join('')
+
