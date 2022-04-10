@@ -289,3 +289,36 @@ time = 6.7---> litres = 3*/
 function litres(time) {
   return Math.floor(time * 0.5);
 }
+
+let log = (arg) => console.log(arg)
+
+
+/*
+Return the number (count) of vowels in the given string.
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+The input string will only consist of lower case letters and/or spaces.*/
+
+let vowels = ['a','e','i','o','u'] 
+
+let countVowels = (str) => {
+  count = 0
+  for(letter of str){
+    if(vowels.includes(letter)){
+      count++
+    }
+  } 
+  return count
+}
+
+log(countVowels('chapapa'))
+
+  let count2 = (str) => {
+    return str.match(/[aeiou]/gi).length
+  }
+
+let count3 = (str) => {
+    return str.match(/[aeiou]/gi)
+  }
+
+log(count2('apa'))
+log(count3('apa'))
