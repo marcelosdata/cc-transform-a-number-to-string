@@ -280,7 +280,7 @@ let noSpace2 = (x) => x.split(' ').join('')
 Nathan loves cycling.
 
 Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
-You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.!
 
 For example:
 time = 3 ----> litres = 1
@@ -336,3 +336,88 @@ let squareEveryDigit = (num) =>{
 }
 
 console.log(squareEveryDigit(45))
+
+//Refactor into an arrow function June 28 2022
+
+const plantNeedsWater = function(day) {
+  if (day === 'Wednesday') {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const plantNeedsWater2 = day => {
+  return (day==='Wednesday') ? true : false;
+}
+
+console.log(plantNeedsWater2('Friday'))
+
+// Write your code below
+let bobsFollowers = ['Marcelo','Valentina','Clemen','Leandro']
+
+let tinasFollowers = ['Valentina','Clemen','John']
+
+let mutualFollowers =[]
+
+for(let i = 0; i < bobsFollowers.length ; i++ ){
+  for(let j = 0; j < tinasFollowers.length ; j++ ){
+    if(bobsFollowers[i] === tinasFollowers[j]){
+       mutualFollowers.push(bobsFollowers[i])
+    }
+  }
+}
+
+console.log(mutualFollowers)
+
+//
+
+const firstMessage = 'I will print!';
+const secondMessage = 'I will not print!'; 
+ 
+// A do while with a stopping condition that evaluates to false
+do {
+ console.log(firstMessage)
+} while (true === false);
+ 
+// A while loop with a stopping condition that evaluates to false
+while (true === false){
+  console.log(secondMessage)
+};
+
+// Write your code below
+
+let cupsOfSugarNeeded = 2;
+let cupsAdded = 0;
+
+do {
+  cupsAdded++
+  console.log(cupsAdded)
+} while ( cupsAdded < cupsOfSugarNeeded  )
+
+// Practice for loop and break
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+
+// Write your code below
+for(let i = 0; i< rapperArray.length ; i++){
+  console.log(rapperArray[i])
+  console.log("And if you don't know, now you know.")
+  if(rapperArray[i] === 'Notorious B.I.G.') {
+    break
+  }
+}
+
+/*Some really funny web dev gave you a sequence of numbers from his API response as an sequence of strings!
+
+You need to cast the whole array to the correct type.
+
+Create the function that takes as a parameter a sequence of numbers represented as strings and outputs a sequence of numbers.
+
+ie:["1", "2", "3"] to [1, 2, 3]
+
+Note that you can receive floats as well.*/
+
+function toNumberArray(stringarray){
+  return stringarray.map(a=> Number(a))
+}
+
